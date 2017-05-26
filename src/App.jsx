@@ -1,22 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const title    = React.createElement('h1',null,'React to-do');
-const subtitle = React.createElement('p',{className: 'subtitle'},'Мое первое приложение на реакте');
-const container = React.createElement('div',null, title, subtitle);
-
-
 function App() {
 	return (
-	  <div>
-  		<h1>React todo</h1>
-  		<p className="subtitle">Мое первое приложение на реакте!!!</p>
-	  </div>
-);
+    <main>
+      <header>
+        <h1>React to-do</h1>
+      </header>
+
+      <section className="todo-list">
+        <div className="todo completed">
+          <button className="checkbox icon">
+            <i className="material-icons">check_box</i>
+          </button>
+          <span className="todo-title">Изучить js</span>
+          <button className="delete icon">
+            <i className="material-icons">delete</i>
+          </button>
+        </div>
+        <div className="todo">
+          <button className="checkbox icon">
+            <i className="material-icons">check_box_outline_blank</i>
+          </button>
+          <span className="todo-title">Изучить реакт!</span>
+          <button className="delete icon">
+            <i className="material-icons">delete</i>
+          </button>
+        </div>
+      </section>
+    </main>		
+	);
 }
 
-
-//const dom = ReactDOM.render(app, document.getElementById('root'));
-//console.log(dom);
 ReactDOM.render(<App />, document.getElementById('root'));
-console.log(App);

@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-function App() {
+function App(props) {
+  console.log(props);
 	return (
     <main>
       <header>
-        <h1>React to-do</h1>
+        <h1>{props.title}</h1>
       </header>
 
       <section className="todo-list">
@@ -32,4 +33,4 @@ function App() {
 	);
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App title="react todo!"/>, document.getElementById('root'));
